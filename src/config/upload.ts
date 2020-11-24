@@ -5,7 +5,8 @@ import path from 'path';
 const tempFolder = path.resolve(__dirname, '..', '..', 'temp');
 
 export default {
-  directory: tempFolder,
+  tempFolder,
+  uploadsFolter: path.resolve(tempFolder, 'uploads'),
   storage: multer.diskStorage({
     destination: tempFolder,
     filename(request, file, callback) {
